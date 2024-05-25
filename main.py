@@ -17,6 +17,8 @@ class ATM(object):
         :type banknotesCount: List[int]
         :rtype: None
         """
+        # сложность по времени - O(n)
+        # сложность по памяти - O(1)
         for i, k in enumerate(self.__atm_banknotes):
             i_end = self.__d_len - 1 - i
             self.__atm_banknotes[k] += banknotesCount[i_end]
@@ -26,6 +28,9 @@ class ATM(object):
         :type amount: int
         :rtype: List[int]
         """
+        # сложность по времени - O(n + amount)
+        # сложность по памяти - O(n)
+
         # если сумма выдачи меньше или равана нулю
         if amount <= 0:
             return [-1]
